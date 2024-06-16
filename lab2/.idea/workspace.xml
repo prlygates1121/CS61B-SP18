@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55848a88-a984-4699-95d2-488c056744d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab2setup/lab2setup.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab2setup/out/production/lab2setup/lab2setup.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intlist/IntList.java" beforeDir="false" afterPath="$PROJECT_DIR$/Intlist/IntList.java" afterDir="false" />
-    </list>
+    <list default="true" id="55848a88-a984-4699-95d2-488c056744d6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,11 +78,24 @@
       <updated>1718467053471</updated>
       <workItem from="1718467054675" duration="987000" />
       <workItem from="1718470072915" duration="2396000" />
-      <workItem from="1718539961278" duration="3530000" />
+      <workItem from="1718539961278" duration="4095000" />
     </task>
+    <task id="LOCAL-00001" summary="finish lab2">
+      <option name="closed" value="true" />
+      <created>1718543636091</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718543636091</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="finish lab2" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish lab2" />
   </component>
 </project>
