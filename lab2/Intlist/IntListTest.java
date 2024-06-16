@@ -66,4 +66,13 @@ public class IntListTest {
         assertEquals(IntList.of(1, 2, 3), A);
     }
 
+    @Test
+    public void testNull() {
+        IntList A = null;
+        IntList B = IntList.of(3, 2, 1, 0);
+        IntList exp = IntList.of(3, 2, 1, 0);
+        assertEquals(exp, IntList.catenate(A, B));
+        assertEquals(exp, IntList.dcatenate(A, B));
+    }
+
 }
