@@ -1,4 +1,6 @@
 public class NBody {
+    private static final double G = 6.67e-11;
+
     public static double readRadius(String fileName) {
         In in = new In(fileName);
         in.readInt();
