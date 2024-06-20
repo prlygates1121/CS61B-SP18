@@ -74,9 +74,9 @@ public class SLList {
 class test {
     public static void main(String[] args) {
         SLList list1 = new SLList(2);
-        list1.addFirst(1);
-        list1.addFirst(8);
-        list1.addLast_ite(2);
+//        list1.addFirst(1);
+//        list1.addFirst(8);
+//        list1.addLast_ite(2);
         System.out.println(list1.size());
     }
 }
