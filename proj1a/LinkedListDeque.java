@@ -20,13 +20,6 @@ public class LinkedListDeque<T> {
         size = 0;
     }
 
-    public LinkedListDeque(T i) {
-        sentinel = new Node<>(null, null, null);
-        sentinel.next = new Node<>(sentinel, i, sentinel);
-        sentinel.prev = sentinel.next;
-        size = 1;
-    }
-
     public void addFirst(T i) {
         sentinel.next.prev = new Node<>(sentinel, i, sentinel.next);
         sentinel.next = sentinel.next.prev;
@@ -86,14 +79,4 @@ public class LinkedListDeque<T> {
 
     public boolean isEmpty() { return size == 0;}
 
-    public static void main(String[] args) {
-        LinkedListDeque<Integer> a = new LinkedListDeque<>(2);
-        a.addFirst(5);
-        a.addFirst(6);
-        a.addLast(99);
-        System.out.println(a.getRecursive(0));
-        System.out.println(a.getRecursive(1));
-        System.out.println(a.getRecursive(2));
-        System.out.println(a.getRecursive(5));
-    }
 }
