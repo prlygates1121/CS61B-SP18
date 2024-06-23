@@ -91,6 +91,9 @@ public class ArrayDeque<T> {
     }
 
     public T removeFirst() {
+        if (size == 0) {
+            return null;
+        }
         if (items.length >= 16 && (double) size / items.length < 0.25) {
             shrink();
         }
@@ -102,6 +105,9 @@ public class ArrayDeque<T> {
     }
 
     public T removeLast() {
+        if (size == 0) {
+            return null;
+        }
         if (items.length >= 16 && (double) size / items.length < 0.25) {
             shrink();
         }

@@ -101,6 +101,7 @@ public class ArrayDequeTest {
         passed = (what.removeLast() == 5) && passed;
         passed = (what.removeFirst() == 6) && passed;
         passed = (what.removeLast() == 7) && passed;
+
         // check if empty
         passed = checkEmpty(true, what.isEmpty()) && passed;
         // check size
@@ -157,6 +158,22 @@ public class ArrayDequeTest {
         boolean passed = (a.get(0) == null);
         a.addLast("holy");
         passed = (a.get(0).equals("holy")) && passed;
+        printTestStatus(passed);
+    }
+
+    // excessive removes test
+    public static void excessiveRemoves() {
+        System.out.println("Running excessiveRemoves.");
+
+        ArrayDeque<Integer> a = new ArrayDeque<>();
+        for (int i = 0; i < 100000; i++) {
+            a.addLast(i);
+        }
+        for (int i = 0; i < 1000000; i++) {
+            a.removeFirst();
+        }
+        boolean passed = checkEmpty(true, a.isEmpty());
+        passed = checkSize(0, a.size()) && passed;
         printTestStatus(passed);
     }
 
