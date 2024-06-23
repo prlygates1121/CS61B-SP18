@@ -84,68 +84,70 @@ public class ArrayDequeTest {
         System.out.println("Running extra test.");
 
         ArrayDeque<Integer> what = new ArrayDeque<>();
-        what.addFirst(1);
+        what.addLast(0);
+        what.addLast(1);
+        what.addLast(2);
+        what.addLast(3);
+        what.addLast(4);
+        what.addLast(5);
+        what.addLast(6);
+        what.addLast(7);
+        // remove and print removed value
+        boolean passed = (what.removeFirst() == 0);
+        passed = (what.removeLast() == 1) && passed;
+        passed = (what.removeFirst() == 2) && passed;
+        passed = (what.removeLast() == 3) && passed;
+        passed = (what.removeFirst() == 4) && passed;
+        passed = (what.removeLast() == 5) && passed;
+        passed = (what.removeFirst() == 6) && passed;
+        passed = (what.removeLast() == 7) && passed;
+        // check if empty
+        passed = checkEmpty(true, what.isEmpty()) && passed;
+        // check size
+        passed = checkSize(0, what.size()) && passed;
+        // add from back and front
+        what.addFirst(0);
+        what.addLast(1);
         what.addFirst(2);
-        what.addFirst(3);
+        what.addLast(3);
         what.addFirst(4);
-        what.removeFirst();
-        what.removeFirst();
-        what.removeFirst();
-        what.removeFirst();
-        what.addFirst(5);
-        what.addFirst(6);
-        what.addFirst(7);
-        what.addFirst(6);
-        what.addFirst(7);
-        what.addFirst(5);
-        what.addFirst(6);
-        what.addFirst(6);
-        what.addFirst(7);
-        what.addFirst(5);
-        System.out.println(what.get(0));
-        System.out.println(what.get(1));
-        System.out.println(what.get(2));
-        System.out.println(what.get(3));
-        System.out.println(what.get(4));
-        System.out.println(what.get(5));
-        System.out.println(what.get(6));
-        System.out.println(what.get(7));
-        System.out.println(what.get(8));
-        System.out.println(what.get(9));
-        System.out.println(what.get(10));
-        System.out.println(what.get(11));
-        what.addFirst(6);
-        what.addFirst(5);
-        what.addFirst(6);
-        what.addFirst(7);
-
-        System.out.println(what.removeFirst());
-        System.out.println(what.removeFirst());
-        System.out.println(what.removeFirst());
-        System.out.println(what.removeFirst());
-        System.out.println(what.removeFirst());
-        System.out.println(what.removeFirst());
-        System.out.println(what.removeFirst());
-        System.out.println(what.removeFirst());
-        System.out.println(what.removeFirst());
-        System.out.println(what.removeFirst());
-        System.out.println(what.removeFirst());
-        System.out.println(what.removeFirst());
-        System.out.println(what.removeFirst());
-        System.out.println(what.removeFirst());
-        what.addLast(0);
-        what.addLast(1);
-        what.addLast(2);
-        what.addLast(3);
-        what.addLast(4);
         what.addLast(5);
-        what.addLast(0);
-        what.addLast(1);
-        what.addLast(2);
-        what.addLast(3);
-        what.addLast(4);
-        what.addLast(5);
-        System.out.println();
+        what.addFirst(6);
+        what.addLast(7);
+        what.addFirst(8);
+        what.addLast(9);
+        // check size
+        passed = checkSize(10, what.size()) && passed;
+        // check get
+        passed = (what.get(0) == 8) && passed;
+        passed = (what.get(1) == 6) && passed;
+        passed = (what.get(2) == 4) && passed;
+        passed = (what.get(3) == 2) && passed;
+        passed = (what.get(4) == 0) && passed;
+        passed = (what.get(5) == 1) && passed;
+        passed = (what.get(6) == 3) && passed;
+        passed = (what.get(7) == 5) && passed;
+        passed = (what.get(8) == 7) && passed;
+        passed = (what.get(9) == 9) && passed;
+        // check if empty
+        passed = checkEmpty(false, what.isEmpty()) && passed;
+        // remove from back and front
+        passed = (what.removeFirst() == 8) && passed;
+        passed = (what.removeLast() == 9) && passed;
+        passed = (what.removeFirst() == 6) && passed;
+        passed = (what.removeLast() == 7) && passed;
+        passed = (what.removeFirst() == 4) && passed;
+        passed = (what.removeLast() == 5) && passed;
+        passed = (what.removeFirst() == 2) && passed;
+        passed = (what.removeLast() == 3) && passed;
+        passed = (what.removeFirst() == 0) && passed;
+        passed = (what.removeLast() == 1) && passed;
+        // check if empty
+        passed = checkEmpty(true, what.isEmpty()) && passed;
+        // check size
+        passed = checkSize(0, what.size()) && passed;
+        // finish test
+        printTestStatus(passed);
     }
 
     public static void nullTest() {

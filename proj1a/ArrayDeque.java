@@ -106,24 +106,31 @@ public class ArrayDeque<T> {
             shrink();
         }
         leftLast();
-        T value = items[nextFirst];
+        T value = items[nextLast];
         items[nextLast] = null;
         size--;
         return value;
     }
 
-    public boolean isEmpty() { return size == 0;}
-    public int size() { return size;}
+    public boolean isEmpty() {
+        return size == 0;
+
+    }
+    public int size() {
+        return size;
+    }
+
     public void printDeque() {
         for (int i = 0; i < size; i++) {
             System.out.print(items[i] + " ");
         }
     }
 
-
     public T get(int index) {
-        if (index >= size || index < 0) return null;
-        return items[(nextFirst + 1 + index) % items.length];
+        if (index >= size || index < 0) {
+            return null;
+        }
+            return items[(nextFirst + 1 + index) % items.length];
     }
 
 
