@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d98cc82-2912-4c05-b6b7-0406fa57a7de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Lectures/.idea/libraries/javalib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lectures/Testing/Sort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lectures/Testing/TestSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IntList/IntList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lectures/Lectures.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lectures/Lectures.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lectures/out/production/Lectures/Lectures/Lectures.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lectures/out/production/Lectures/Lectures/Lectures.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flik/HorribleSteve.java" beforeDir="false" afterPath="$PROJECT_DIR$/Flik/HorribleSteve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IntList/IntListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/IntList/IntListTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proj1a/ArrayDequeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proj1a/ArrayDequeTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="7d98cc82-2912-4c05-b6b7-0406fa57a7de" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,8 +81,17 @@
       <option name="presentableId" value="Default" />
       <updated>1719161832472</updated>
       <workItem from="1719161833703" duration="385000" />
-      <workItem from="1719232272605" duration="5011000" />
+      <workItem from="1719232272605" duration="5326000" />
     </task>
+    <task id="LOCAL-00001" summary="lab3 1st try">
+      <option name="closed" value="true" />
+      <created>1719237803068</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719237803068</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,5 +99,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="lab3 1st try" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab3 1st try" />
   </component>
 </project>
