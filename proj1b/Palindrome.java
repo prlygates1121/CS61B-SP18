@@ -28,6 +28,9 @@ public class Palindrome {
         if (word == null || word.isEmpty()) {
             return true;
         }
+        if (cc == null) {
+            return false;
+        }
         Deque<Character> deque = wordToDeque(word);
         while (true) {
             Character left = deque.removeFirst();

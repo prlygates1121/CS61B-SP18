@@ -22,10 +22,17 @@ public class TestPalindrome {
         assertTrue(palindrome.isPalindrome("level"));
         assertTrue(palindrome.isPalindrome("a"));
         assertTrue(palindrome.isPalindrome(""));
-        assertTrue(palindrome.isPalindrome(null));
+        assertTrue(palindrome.isPalindrome("AaA"));
+        assertTrue(palindrome.isPalindrome("23332"));
 
+        assertFalse(palindrome.isPalindrome("horse"));
+        assertFalse(palindrome.isPalindrome("cat"));
         assertFalse(palindrome.isPalindrome("contemplate"));
         assertFalse(palindrome.isPalindrome("good"));
+        assertFalse(palindrome.isPalindrome("$A"));
+        assertFalse(palindrome.isPalindrome("1A"));
+        assertFalse(palindrome.isPalindrome("aAaa"));
+        assertFalse(palindrome.isPalindrome("23333"));
     }
 
     @Test
@@ -35,5 +42,7 @@ public class TestPalindrome {
         assertTrue(palindrome.isPalindrome("", a));
         assertTrue(palindrome.isPalindrome("flake", a));
         assertFalse(palindrome.isPalindrome("433980213", a));
+        assertFalse(palindrome.isPalindrome("dd", null));
+
     }
 }

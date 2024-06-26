@@ -1,5 +1,5 @@
 @SuppressWarnings("unchecked")
-public class ArrayDeque<T> implements Deque<T>{
+public class ArrayDeque<T> implements Deque<T> {
     private T[] items;
     private int size;
     private int nextFirst;
@@ -145,11 +145,11 @@ public class ArrayDeque<T> implements Deque<T>{
         if (index >= size || index < 0) {
             return null;
         }
-            return items[(nextFirst + 1 + index) % items.length];
+        return items[(nextFirst + 1 + index) % items.length];
     }
 
 
-    //    public void addFirst(T value) {
+//    public void addFirst(T value) {
 //        if (size >= items.length) {
 //            expand();
 //        }
