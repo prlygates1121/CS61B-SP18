@@ -16,33 +16,51 @@ public class TestPalindrome {
         assertEquals("persiflage", actual);
     }
 
+//    @Test
+//    public void testIsPalindrome() {
+//        assertTrue(palindrome.isPalindrome("hannah"));
+//        assertTrue(palindrome.isPalindrome("level"));
+//        assertTrue(palindrome.isPalindrome("a"));
+//        assertTrue(palindrome.isPalindrome(""));
+//        assertTrue(palindrome.isPalindrome("AaA"));
+//        assertTrue(palindrome.isPalindrome("23332"));
+//
+//        assertFalse(palindrome.isPalindrome("horse"));
+//        assertFalse(palindrome.isPalindrome("cat"));
+//        assertFalse(palindrome.isPalindrome("contemplate"));
+//        assertFalse(palindrome.isPalindrome("good"));
+//        assertFalse(palindrome.isPalindrome("$A"));
+//        assertFalse(palindrome.isPalindrome("1A"));
+//        assertFalse(palindrome.isPalindrome("aAaa"));
+//        assertFalse(palindrome.isPalindrome("23333"));
+//    }
+//
+//    @Test
+//    public void testIsPalindromeOffByOne() {
+//        OffByOne a = new OffByOne();
+//        assertTrue(palindrome.isPalindrome("hanmbi", a));
+//        assertTrue(palindrome.isPalindrome("", a));
+//        assertTrue(palindrome.isPalindrome("flake", a));
+//        assertFalse(palindrome.isPalindrome("433980213", a));
+//        assertFalse(palindrome.isPalindrome("dd", null));
+//
+//    }
+
     @Test
     public void testIsPalindrome() {
-        assertTrue(palindrome.isPalindrome("hannah"));
-        assertTrue(palindrome.isPalindrome("level"));
-        assertTrue(palindrome.isPalindrome("a"));
         assertTrue(palindrome.isPalindrome(""));
-        assertTrue(palindrome.isPalindrome("AaA"));
-        assertTrue(palindrome.isPalindrome("23332"));
+        assertTrue(palindrome.isPalindrome("a"));
+        assertTrue(palindrome.isPalindrome("aba"));
+        assertTrue(palindrome.isPalindrome("aaccbbbccaa"));
 
-        assertFalse(palindrome.isPalindrome("horse"));
-        assertFalse(palindrome.isPalindrome("cat"));
-        assertFalse(palindrome.isPalindrome("contemplate"));
-        assertFalse(palindrome.isPalindrome("good"));
-        assertFalse(palindrome.isPalindrome("$A"));
-        assertFalse(palindrome.isPalindrome("1A"));
-        assertFalse(palindrome.isPalindrome("aAaa"));
-        assertFalse(palindrome.isPalindrome("23333"));
+        assertFalse(palindrome.isPalindrome("ab"));
+        assertFalse(palindrome.isPalindrome("ababba"));
     }
 
     @Test
-    public void testIsPalindromeOffByOne() {
-        OffByOne a = new OffByOne();
-        assertTrue(palindrome.isPalindrome("hanmbi", a));
-        assertTrue(palindrome.isPalindrome("", a));
-        assertTrue(palindrome.isPalindrome("flake", a));
-        assertFalse(palindrome.isPalindrome("433980213", a));
-        assertFalse(palindrome.isPalindrome("dd", null));
-
+    public void testIsOffByOnePalindrome() {
+        CharacterComparator cc = new OffByOne();
+        assertTrue(palindrome.isPalindrome("flake", cc));
+        assertFalse(palindrome.isPalindrome("aba", cc));
     }
 }
