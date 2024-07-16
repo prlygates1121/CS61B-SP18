@@ -14,7 +14,8 @@ public class Main {
         } else if (args.length == 1) {
             Game game = new Game();
             TETile[][] worldState = game.playWithInputString(args[0]);
-            System.out.println(TETile.toString(worldState));
+            game.ter.initialize(worldState.length, worldState[0].length);
+            game.ter.renderFrame(worldState);
         } else {
             Game game = new Game();
             game.playWithKeyboard();
