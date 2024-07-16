@@ -162,18 +162,22 @@ public class Game {
     }
 
     private TETile getRandomWall() {
-        return switch (rand.nextInt(3)) {
-            case 0 -> Tileset.WALL_1;
-            case 1 -> Tileset.WALL_2;
-            case 2 -> Tileset.WALL_3;
-            default -> throw new IllegalStateException("Unexpected value: " + rand.nextInt(3));
-        };
+        switch (rand.nextInt(3)) {
+            case 0:
+                return Tileset.WALL_1;
+            case 1:
+                return Tileset.WALL_2;
+            case 2:
+                return Tileset.WALL_3;
+            default:
+                throw new IllegalStateException("Unexpected value: " + rand.nextInt(3));
+        }
     }
 
     public void makeRooms(TETile[][] map, int x, int y) {
         if (map[x][y] == Tileset.FLOOR) {
-            int height = rand.nextInt(3, 5);
-            int width = rand.nextInt(3, 5);
+            int height = rand.nextInt(3) + 2;
+            int width = rand.nextInt(3) + 2;
             for (int m = x - width; m <= x + width; m++) {
                 for (int n = y - height; n <= y + height; n++) {
                     if (m == x - width || m == x + width || n == y - height || n == y + height) {
@@ -223,7 +227,7 @@ public class Game {
         }
 
         // Get a distance
-        int distance = rand.nextInt(7, 26);
+        int distance = rand.nextInt(19) + 7;
 
         // Update pathIdx
         if (pathIdx == pathDensity) {
@@ -234,7 +238,7 @@ public class Game {
         pathIdx++;
 
         // Get a direction
-        Direction direction = Direction.values()[rand.nextInt(0, 4)];
+        Direction direction = Direction.values()[rand.nextInt(4)];
         if (priorDirection != null) {
             int judge = priorDirection.ordinal() + direction.ordinal();
             if (judge == 1 || judge == 5 || priorDirection.equals(direction)) {
